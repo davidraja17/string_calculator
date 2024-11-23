@@ -30,5 +30,11 @@ RSpec.describe StringCalculator do
         end
     end
 
+    context "when the input has numbers separated by newlines" do
+        it "returns the sum of all the numbers" do
+          expect(calculator.add("1\n2,3")).to eq(6)
+        end
+    end
+
   end
 end
