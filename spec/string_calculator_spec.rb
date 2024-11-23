@@ -64,5 +64,12 @@ RSpec.describe StringCalculator do
         end
     end
 
+    context "when the input contains invalid formats" do
+        it "handles edge cases gracefully" do
+          expect(calculator.add("1,,2")).to eq(3)
+          expect(calculator.add("1\n\n2")).to eq(3)
+        end
+    end
+
   end
 end
