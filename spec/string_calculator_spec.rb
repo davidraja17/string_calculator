@@ -36,5 +36,23 @@ RSpec.describe StringCalculator do
         end
     end
 
+    context "when the input specifies a custom delimiter" do
+        it "uses the custom delimiter and returns the sum" do
+            expect(calculator.add("//;\n1;2;3")).to eq(6)
+          end
+    
+          it "handles multi-character delimiters" do
+            expect(calculator.add("//[***]\n1***2***3")).to eq(6)
+          end
+    
+          it "handles multiple custom delimiters" do
+            expect(calculator.add("//[*][%]\n1*2%3")).to eq(6)
+          end
+    
+          it "handles multiple multi-character delimiters" do
+            expect(calculator.add("//[**][%%]\n1**2%%3")).to eq(6)
+          end
+    end
+
   end
 end
