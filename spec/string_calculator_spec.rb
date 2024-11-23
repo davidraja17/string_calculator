@@ -77,5 +77,11 @@ RSpec.describe StringCalculator do
         end
     end
 
+    context "when non-numeric values are included" do
+        it "ignores non-numeric values and calculates the sum" do
+          expect(calculator.add("1,a,3")).to eq(4)
+        end
+    end
+
   end
 end
