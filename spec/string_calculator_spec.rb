@@ -83,5 +83,12 @@ RSpec.describe StringCalculator do
         end
     end
 
+    context "when large input strings are provided" do
+        it "handles the input efficiently and returns the correct sum" do
+          input = Array.new(1000, 1).join(",") # 1000 numbers of 1
+          expect(calculator.add(input)).to eq(1000)
+        end
+    end
+
   end
 end
