@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # string_calculator
 =======
 # README
@@ -25,4 +24,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
->>>>>>> 3314c6a (Initial commit)
