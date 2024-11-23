@@ -71,5 +71,11 @@ RSpec.describe StringCalculator do
         end
     end
 
+    context "when no numbers are provided after the custom delimiter declaration" do
+        it "returns 0" do
+          expect(calculator.add("//;\n")).to eq(0)
+        end
+    end
+
   end
 end
