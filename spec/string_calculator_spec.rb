@@ -22,7 +22,13 @@ RSpec.describe StringCalculator do
         it "returns the sum of the numbers" do
           expect(calculator.add("1,2")).to eq(3)
         end
-      end
+    end
+
+    context "when the input has multiple numbers separated by commas" do
+        it "returns the sum of all the numbers" do
+          expect(calculator.add("1,2,3,4,5")).to eq(15)
+        end
+    end
 
   end
 end
